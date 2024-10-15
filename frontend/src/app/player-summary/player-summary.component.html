@@ -1,1 +1,37 @@
-<div class="placeholder">Place your content here!</div>
+<div>
+  <input [(ngModel)]="playerID" placeholder="Enter Player ID">
+  <button (click)="fetchPlayerSummary()">Fetch Player Summary</button>
+</div>
+
+<div *ngIf="error" class="error">
+  {{ error }}
+</div>
+
+<div *ngIf="playerSummary">
+  <h2>{{ playerSummary.name }}</h2>
+  <p>Team: {{ playerSummary.team }}</p>
+  <p>Height: {{ playerSummary.height }} | Weight: {{ playerSummary.weight }}</p>
+  <p>Position: {{ playerSummary.position }}</p>
+
+  <div *ngFor="let game of playerSummary.games">
+    <h3>Game: {{ game.date }}</h3>
+    <p>{{ game.home_team }} vs {{ game.away_team }}</p>
+    
+    <svg width="500" height="470">
+      <!-- Basketball court background -->
+      <rect width="500" height="470" fill="#f0f0f0" />
+      <line x1="250" y1="0" x2="250" y2="470" stroke="black" />
+      <circle cx="250" cy="60" r="60" fill="none" stroke="black" />
+      
+      <!-- Plot shots -->
+      <g *ngFor="let shot of game.shots">
+        <circle 
+          [attr.cx]="250 + shot.x * 5" 
+          [attr.cy]="60 + shot.y * 5" 
+          r="5" 
+          [attr.fill]="shot.made ? 'green' : 'red'" 
+        />
+      </g>
+    </svg>
+  </div>
+</div>
