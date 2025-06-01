@@ -1,3 +1,1 @@
-# Submission Information
 
-Applicant Name:
