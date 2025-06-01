@@ -62,8 +62,3 @@ cd /path/to/project/frontend
 npm start
 ```
 The frontend should run on http://localhost:4200/. Visit this address to see the app in your browser.https://github.com/dsmithnautel/okc-sys-design
-
-
-# Questions?
-
-Email datasolutions@okcthunder.com
