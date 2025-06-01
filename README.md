@@ -1,41 +1,3 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/UDc3mhmF)
-
-# OKC Technical Project Deliverable
-
-### Internship Program Disclosures
-
-* You must be eligible to work in the United States to be able to qualify for this internship.
-  
-* The pay for this internship is the greater of your local minimum wage and $13/hour.
-
-* This application is for the purposes of an internship taking place in the Spring, Summer, or Fall of 2025.
-
-### 1. Backend Engineering
-
-* Architect and implement a normalized PostgreSQL database to store the data provided in `backend/raw_data`. All information from the original data should be accessible via the database.
-
-* Write a brief description of your database architecture (<250 words). Feel free to provide a visual representation as an aide. Submit relevant responses in the `written_responses` folder provided.
-
-* In the programming language of your choice, write a process to load the dataset into your PostgreSQL database. Ensure that this process can run repeatedly without duplicating or obscuring references in the database. Include the source code of your process in the `backend/scripts` folder. Note: You can feel free to utilize the power of Django models and migrations to achieve this step.
-
-* After loading the data, export the state of your database using `pg_dump -U okcapplicant okc > dbexport.pgsql`. Include `dbexport.psql` in the `backend/scripts` folder.
-
-* The skeleton of an API View `PlayerSummary` can be found in `backend/app/views/players.py`. Implement this API to return a player summary that mimics the structure of `backend/app/views/sample_response/sample_response.json`. Feel free to import additional modules/libraries in order to do this, but ensure that the `backend/requirements.txt` is updated accordingly. Viewing http://localhost:4200/player-summary-api allows you to see the output of your API, given the playerID parameter provided in the user input.
-
-### 2. Frontend Engineering
-
-* The `player-summary` component, which is viewable at http://localhost:4200/player-summary, makes a call to an API endpoint at `/api/v1/playerSummary/{playerID}` that returns player summary data. One component of the player summary data are the player's shots in each game, note that:
-
-   * The shot's x and y coordinates are provided and are measured in feet
-   * The location of each shot is relative to the center of the basket, per `court_diagram.jpg` in this repository
-
-* Within the `player-summary` component found in `frontend/src/app/player-summary/`, create an interface that describes the player summary data returned from the API.
-
-* Feel free to import additional modules of your choice, and design the interface however you wish. Just make sure that the `package.json` and `package-lock.json` are updated accordingly.
-
-* Upon completion of the Frontend Engineering deliverable, please upload to this repo screenshots or screen captures that demonstrate your UI.
-
-
 # Application Setup
 In order to complete the Backend Engineering or Frontend Engineering deliverables, you will need to do all of the following setup items. Please follow the instructions below, from top to bottom sequentially, to ensure that you are set up to run the app. The app is run on an Angular frontend, Django backend, and a PostgreSQL database.
 
@@ -99,11 +61,7 @@ Start the frontend by running the following commands
 cd /path/to/project/frontend
 npm start
 ```
-The frontend should run on http://localhost:4200/. Visit this address to see the app in your browser.
-
-
-# SUBMISSION.md
-Please fill out the SUBMISSION.md file to ensure we have your name attached to the project.
+The frontend should run on http://localhost:4200/. Visit this address to see the app in your browser.https://github.com/dsmithnautel/okc-sys-design
 
 
 # Questions?
